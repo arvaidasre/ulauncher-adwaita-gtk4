@@ -1,12 +1,13 @@
 {
   "manifest_version": "1",
-  "name": "adwaita-gtk4",
-  "display_name": "Adwaita-Gtk4",
+  "name": "mint-gtk4-grey",
+  "display_name": "Mint-Gtk4-Grey",
   "extend_theme": "light",
   "css_file": "theme.css",
   "css_file_gtk_3.20+": "theme-gtk-3.20.css",
   "matched_text_hl_colors": {
-    "when_selected": "#3584e4",
-    "when_not_selected": "#1e1e1e"
+    "when_selected": "#7f8c8d",
+    "when_not_selected": "#2e3436"
   }
 }
+

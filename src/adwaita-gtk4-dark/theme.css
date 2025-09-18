@@ -3,14 +3,15 @@
  */
 @define-color bg_color #1e1e1e;
 @define-color window_bg @bg_color;
-@define-color window_border_color #454545;
-@define-color prefs_backgroud #fafafa;
+@define-color window_border_color #2b2b2b;
+@define-color accent_color #78aeed;
+@define-color prefs_backgroud alpha(@accent_color, 0.12);
 
 /**
  * Input
  */
-@define-color selected_bg_color #454545;
-@define-color selected_fg_color #ffffff;
+@define-color selected_bg_color @accent_color;
+@define-color selected_fg_color #1a1a1a;
 @define-color input_color #ffffff;
 @define-color caret_color darker(@input_color);
 
@@ -18,19 +19,19 @@
  * Result items
  */
 @define-color item_name #e6e6e6;
-@define-color item_text #e6e6e6;
-@define-color item_box_selected #454545;
-@define-color item_text_selected #ffffff;
-@define-color item_name_selected #ffffff;
-@define-color item_shortcut_color #ffffff;
+@define-color item_text #cfd8dc;
+@define-color item_box_selected alpha(@accent_color, 0.18);
+@define-color item_text_selected @item_text;
+@define-color item_name_selected @item_name;
+@define-color item_shortcut_color #e6e6e6;
 @define-color item_shortcut_shadow darker(@bg_color);
-@define-color item_shortcut_color_sel #ffffff;
+@define-color item_shortcut_color_sel @item_shortcut_color;
 @define-color item_shortcut_shadow_sel darker(@item_box_selected);
 
 .app {
     background-color: @window_bg;
     border-color: @window_border_color;
-    border-radius: 14px;
+    border-radius: 12px;
 }
 
 .input {
@@ -56,9 +57,8 @@
 
 .selected.item-box {
     background-color: @item_box_selected;
-    border-left: 1px solid @window_border_color;
-    border-right: 1px solid @window_border_color;
-    border-radius: 14px;
+    border: none;
+    border-radius: 12px;
 }
 .selected.item-box .item-text {
     color: @item_text_selected;
